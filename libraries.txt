@@ -1,0 +1,48 @@
+Benötigte Arduino-Bibliotheken für EMDR Bar:
+
+1. LVGL (Light and Versatile Graphics Library)
+   - Version: 8.3.0 oder höher
+   - Installation: Arduino Library Manager -> "lvgl"
+   - GitHub: https://github.com/lvgl/lvgl
+
+2. TFT_eSPI (TFT library for ESP32)
+   - Version: 2.5.0 oder höher
+   - Installation: Arduino Library Manager -> "TFT_eSPI"
+   - GitHub: https://github.com/Bodmer/TFT_eSPI
+   - WICHTIG: User_Setup.h muss konfiguriert werden!
+
+3. FastLED (LED-Streifen Bibliothek)
+   - Version: 3.6.0 oder höher
+   - Installation: Arduino Library Manager -> "FastLED"
+   - GitHub: https://github.com/FastLED/FastLED
+
+4. Wire (I2C Kommunikation - bereits in ESP32 Core enthalten)
+   - Für Touch Controller Kommunikation
+
+Board-Einstellungen in Arduino IDE:
+- Board: "ESP32S3 Dev Module"
+- CPU Frequency: "240MHz (WiFi)"
+- Flash Mode: "QIO 80MHz"
+- Flash Size: "16MB (128Mb)"
+- Partition Scheme: "16M Flash (3MB APP/9.9MB FATFS)"
+- PSRAM: "OPI PSRAM"
+
+Pin-Verbindungen:
+LED-Streifen:
+- Data Pin: GPIO 21
+- VCC: 5V
+- GND: GND
+
+Touch Controller (CST816S):
+- SDA: GPIO 8
+- SCL: GPIO 9
+- INT: GPIO 7
+- RST: GPIO 6
+
+Display (ST7789):
+- MOSI: GPIO 11
+- SCLK: GPIO 12
+- CS: GPIO 10
+- DC: GPIO 13
+- RST: GPIO 14
+- BL: GPIO 15
